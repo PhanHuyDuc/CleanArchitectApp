@@ -4,10 +4,10 @@ namespace Domain
 {
     public class BannerCategory
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public required string Name { get; set; }
+        public required string Description { get; set; }
         [JsonIgnore]
-        public ICollection<Banner> Banners { get; set; }
+        public required ICollection<Banner> Banners { get; set; }
     }
 }

@@ -3,11 +3,11 @@ namespace Domain
 {
     public class ContentImage
     {
-        public string Id { get; set; }
-        public string Url { get; set; }
+        public string Id { get; set; }  = Guid.NewGuid().ToString();
+        public required string Url { get; set; }
         public bool IsMain { get; set; }
 
-        public Guid? ContentId { get; set; }
+        public required string ContentId { get; set; }
 
     }
 }

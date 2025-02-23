@@ -4,10 +4,10 @@ namespace Domain
 {
     public class ContentCategory
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Id { get; set; }  = Guid.NewGuid().ToString();
+        public required string Name { get; set; }
+        public required string Description { get; set; }
         [JsonIgnore]
-        public ICollection<Content> Contents { get; set; }
+        public required ICollection<Content> Contents { get; set; }
     }
 }
