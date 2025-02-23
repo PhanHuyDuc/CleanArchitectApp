@@ -9,7 +9,7 @@ namespace Domain
         public bool IsActive { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime UpdatedDate { get; set; }
-        public Guid BannerCategoryId { get; set; }
+        public string BannerCategoryId { get; set; }
         public required string PhotoId { get; set; }
         public required string BannerImage { get; set; }
         public required BannerCategory BannerCategory { get; set; }

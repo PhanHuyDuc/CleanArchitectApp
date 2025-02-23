@@ -19,7 +19,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new SetMain.Command { Id = id }));
         }
         [HttpPost("{id}")]
-        public async Task<IActionResult> Add(Guid id, [FromForm] ContentImageDto contentImageDto)
+        public async Task<IActionResult> Add(string id, [FromForm] ContentImageDto contentImageDto)
         {
             contentImageDto.ContentId = id;
             return HandleResult(await Mediator.Send(new Add.Command { ContentImageDto = contentImageDto }));

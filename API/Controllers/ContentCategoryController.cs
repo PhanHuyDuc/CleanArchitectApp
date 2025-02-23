@@ -15,13 +15,13 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id, ContentCategory contentCat)
+        public async Task<IActionResult> Edit(string id, ContentCategory contentCat)
         {
             contentCat.Id = id;
             return HandleResult(await Mediator.Send(new Edit.Command { ContentCategory = contentCat }));
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(string id)
         {
 
             return HandleResult(await Mediator.Send(new Delete.Command { Id = id }));
@@ -32,7 +32,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new Create.Command { ContentCategory = contentCat }));
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> Detail(Guid id)
+        public async Task<IActionResult> Detail(string id)
         {
             var result = await Mediator.Send(new Details.Query { Id = id });
             return HandleResult(result);

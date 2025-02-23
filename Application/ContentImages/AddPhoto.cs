@@ -39,7 +39,7 @@ namespace Application.ContentImages
                         Url = PhotoUploadResult.Url,
                         Id = PhotoUploadResult.PublicId,
                         IsMain = false,
-                        ContentId = request.ContentImageDto.ContentId == Guid.Empty ? (Guid?)null : request.ContentImageDto.ContentId,
+                        ContentId = request.ContentImageDto.ContentId,
                     };
 
                     _context.ContentImages.Add(photo);

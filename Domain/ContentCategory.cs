@@ -8,6 +8,6 @@ namespace Domain
         public required string Name { get; set; }
         public required string Description { get; set; }
         [JsonIgnore]
-        public required ICollection<Content> Contents { get; set; }
+        public ICollection<Content>? Contents { get; set; }
     }
 }

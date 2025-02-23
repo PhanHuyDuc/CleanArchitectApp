@@ -11,7 +11,7 @@ namespace Application.MenuCategories
     {
         public class Query : IRequest<Result<MenuCategoryDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<MenuCategoryDto>>
         {

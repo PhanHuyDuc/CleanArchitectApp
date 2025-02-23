@@ -6,7 +6,7 @@ namespace Application.Contents
 {
     public class ContentDto
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ShortDes { get; set; }
@@ -16,7 +16,7 @@ namespace Application.Contents
         public bool IsActive { get; set; }
         public int ViewCount { get; set; }
         public bool IsSpecial { get; set; }
-        public Guid ContentCategoryId { get; set; }
+        public string ContentCategoryId { get; set; }
         [JsonIgnore]
         public ICollection<IFormFile> FileImages { get; set; }
         public List<ContentImageDto> ContentImages { get; set; }

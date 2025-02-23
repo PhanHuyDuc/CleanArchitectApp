@@ -11,7 +11,7 @@ namespace Application.Contents
     {
         public class Query : IRequest<Result<ContentDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<ContentDto>>
         {

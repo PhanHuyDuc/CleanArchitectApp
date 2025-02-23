@@ -27,25 +27,25 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new Create.Command { ContentDto = contentDto }));
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(string id)
         {
             return HandleResult(await Mediator.Send(new Delete.Command { Id = id }));
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id, [FromForm] ContentDto contentDto)
+        public async Task<IActionResult> Edit(string id, [FromForm] ContentDto contentDto)
         {
             contentDto.Id = id;
             return HandleResult(await Mediator.Send(new Edit.Command { ContentDto = contentDto }));
         }
         [AllowAnonymous]
         [HttpGet("{id}")]
-        public async Task<IActionResult> Detail(Guid id)
+        public async Task<IActionResult> Detail(string id)
         {
             var result = await Mediator.Send(new Details.Query { Id = id });
             return HandleResult(result);
         }
         [HttpPut("toggleIsActive/{id}")]
-        public async Task<IActionResult> ToggleIsActive(Guid id)
+        public async Task<IActionResult> ToggleIsActive(string id)
         {
             return HandleResult(await Mediator.Send(new ToggleIsActive.Command { Id = id }));
         }

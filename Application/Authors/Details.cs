@@ -11,7 +11,7 @@ namespace Application.Authors
     {
         public class Query : IRequest<Result<AuthorDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<AuthorDto>>
         {

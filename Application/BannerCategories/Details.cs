@@ -11,7 +11,7 @@ namespace Application.BannerCategories
     {
         public class Query : IRequest<Result<BannerCatDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<BannerCatDto>>
         {

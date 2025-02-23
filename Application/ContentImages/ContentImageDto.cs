@@ -10,6 +10,6 @@ namespace Application.Contents
         public bool IsMain { get; set; }
         [JsonIgnore]
         public ICollection<IFormFile> Files { get; set; }
-        public Guid? ContentId { get; set; }
+        public required string ContentId { get; set; }
     }
 }

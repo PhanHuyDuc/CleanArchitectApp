@@ -7,11 +7,11 @@ namespace Domain
 {
     public class Content
     {
-        public string Id { get; set; }  = Guid.NewGuid().ToString();
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public required string Name { get; set; }
         public required string Description { get; set; }
-        public required string Description2 { get; set; }
-        public required string Description3 { get; set; }
+        public string? Description2 { get; set; }
+        public string? Description3 { get; set; }
         public required string ShortDes { get; set; }
         public required string ContentSource { get; set; }
         public float Price { get; set; }
@@ -20,7 +20,7 @@ namespace Domain
         public bool IsActive { get; set; }
         public int ViewCount { get; set; }
         public bool IsSpecial { get; set; }
-        public Guid ContentCategoryId { get; set; }
+        public required string ContentCategoryId { get; set; }
         public ICollection<ContentImage>? ContentImages { get; set; }
         public string? Author { get; set; }
         public ContentCategory? ContentCategory { get; set; }

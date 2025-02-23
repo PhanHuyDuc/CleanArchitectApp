@@ -11,7 +11,7 @@ namespace Application.WebsiteInfors
     {
         public class Query : IRequest<Result<WebsiteInforDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<WebsiteInforDto>>
         {

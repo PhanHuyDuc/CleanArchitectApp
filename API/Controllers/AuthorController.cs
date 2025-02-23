@@ -16,20 +16,20 @@ namespace API.Controllers
             return HandlePagedResult(result);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> Detail(Guid id)
+        public async Task<IActionResult> Detail(string id)
         {
             var result = await Mediator.Send(new Details.Query { Id = id });
             return HandleResult(result);
 
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id, Author author)
+        public async Task<IActionResult> Edit(string id, Author author)
         {
             author.Id = id;
             return HandleResult(await Mediator.Send(new Edit.Command { Author = author }));
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        public async Task<IActionResult> Delete(string id)
         {
 
             return HandleResult(await Mediator.Send(new Delete.Command { Id = id }));

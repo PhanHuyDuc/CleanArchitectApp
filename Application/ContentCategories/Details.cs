@@ -11,7 +11,7 @@ namespace Application.ContentCategories
     {
         public class Query : IRequest<Result<ContentCatDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Query, Result<ContentCatDto>>
         {

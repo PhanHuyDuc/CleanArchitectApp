@@ -8,7 +8,7 @@ namespace Application.BannerCategories
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
